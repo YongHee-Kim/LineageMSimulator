@@ -27,7 +27,7 @@ Pkg.clone("https://github.com/YongHee-Kim/LineageM_TransformCard")
 ### 기반 데이터
 1. 변신카드 DB는 인벤 [데이터베이스 사용](http://lineagem.inven.co.kr/dataninfo/polymorph/)
 2. 유료뽑기 확률은 [공식 홈페이지](https://lineagem.plaync.com/board/rules/view?articleId=773442) 공개 확률표 참조
-3. 합성시 상위 카드 등장확률은 [게임 유저의 연구자료를](http://qing.one/1133) 사용
+3. 합성시 상위 카드 등장확률은 [게임 유저의 연구자료를](http://qing.one/1133) 사용  
     - 합성확률: 일반(33%), 고급(25%), 희귀(10%), **전설(X 데이터 없음)**  
     - 합성시 같은 등급의 카드는 동일한 확률로 습득한다고 가정
 
