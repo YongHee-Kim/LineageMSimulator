@@ -9,8 +9,7 @@ include("item.jl")
 include("gameplay.jl")
 include("constants.jl")
 
-export GAMEDATA, GRADENAME,
-        #Structs
+export GAMEDATA, GRADENAME, #Structs
         계정,
         #Functions
         itemname, itemgrade,

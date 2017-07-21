@@ -1,6 +1,5 @@
 # 리니지M 모듈 경로 추가
-const PATH = joinpath(dirname(@__FILE__), "..")
-push!(LOAD_PATH, joinpath(PATH, ".."))
+push!(LOAD_PATH, joinpath(dirname(@__FILE__), "..\\"))
 using LineageM
 
 using DataFrames, DataFramesMeta
