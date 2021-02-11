@@ -1,0 +1,4 @@
+name = "LineageMSimulator"
+uuid = "60af49f1-c311-4fd5-8e6e-5494629d47d7"
+authors = ["YongHeeKim <masterplanf@gmail.com>"]
+version = "0.1.0"
