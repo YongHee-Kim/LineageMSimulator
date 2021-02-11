@@ -1,4 +1,4 @@
-module LineageM
+module LineageMSimulator
 
 using ExcelReaders, DataFrames, DataFramesMeta
 
