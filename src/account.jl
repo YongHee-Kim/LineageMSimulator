@@ -8,7 +8,7 @@ struct 카드저장고
     function 카드저장고()
         v = Dict[]
         for grade in 1:5
-            ids =  @where(GAMEDATA[:TransformCard], :grade .== grade)[:id]
+            ids =  @where(GAMEDATA[:TransformCard], :등급 .== grade)[!, :Id]
             push!(v, Dict(zip(ids, fill(false, length(ids)))))
         end
         tried = [0,0,0,0,0] #일반, 영웅, 고급, 희귀, 전설

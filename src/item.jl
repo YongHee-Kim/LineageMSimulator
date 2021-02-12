@@ -51,6 +51,6 @@ function addcard!(ac::계정, id)::Bool
     end
 end
 function drawcard(grade)
-    poll = filter((k,v)->v == grade, TRANSFORMCARD_GRADE) |> keys
+    poll = filter(el -> el[2] == grade, TRANSFORMCARD_GRADE) |> keys
     sample(collect(poll))
 end
