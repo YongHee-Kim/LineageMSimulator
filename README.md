@@ -1,38 +1,36 @@
-# 리니지M 변신카드 습득 시뮬레이션
+# LineageM transform card cost simulator [[KR](README_KR.md)]
+All data are from **Jul 13, 2017**
 
-
-## 설치
+## Installation
 
 ``` julia
 pkg>add "https://github.com/YongHee-Kim/LineageM_TransformCard"
 ```
 
 
-## 시뮬레이션 실행
-
-정상적으로 설치되었다면 다음의 함수를 실행 
+## Use
 ``` julia
 using LineageMSimulator
 
 simulation(:상급; n = 10000)
 ```
 
-## 시뮬레이션 결과
-### 기반 데이터
-1. 변신카드 DB는 인벤 [데이터베이스 사용](http://lineagem.inven.co.kr/dataninfo/polymorph/)
-2. 유료뽑기 확률은 [공식 홈페이지](https://lineagem.plaync.com/board/rules/view?articleId=773442) 공개 확률표 참조
-3. 합성시 상위 카드 등장확률은 [게임 유저의 연구자료를](http://qing.one/1133) 사용  
-    - 합성확률: 일반(33%), 고급(25%), 희귀(10%), **전설(X 데이터 없음)**  
-    - 합성시 같은 등급의 카드는 동일한 확률로 습득한다고 가정
+## Simulation Result
+### Data Source
+1. Transform Card [DataBase](http://lineagem.inven.co.kr/dataninfo/polymorph/)
+2. Gacha Probability [Official Data](https://lineagem.plaync.com/board/rules/list)
+3. Probability of Upgrading at Compose [Research From Player](http://qing.one/1133)  
+    - Compose Upgrade Probability: Normal(33%), High(25%), Rare(10%), **Legend has no data**  
+    - Assumed same grade cards has equal chance of getting 
 
 
-[표-상급 변신 뽑기 시뮬레이션 10만회 결과]
+**Table1. High Grade Transform Gacha 100,000**
 
-| 목표     | 합성횟수_일반 | 합성횟수_고급 | 합성횟수_희귀 | 합성횟수_영웅 |     가챠횟수 |       다이아 |       현금구매액 |
+| Target     | ComposeCount_Normal | ComposeCount_High | ComposeCount_Rare | ComposeCount_Hero |  GachaCount | HardCurrencyCost | CashCost |
 | ------ | ------: | ------: | ------: | ------: | -------: | --------: | ----------: |
-| 첫고급    |     0.0 |       - |       - |       - |      4.9 |       538 |     ₩13,456 |
-| 첫희귀    |    10.9 |     2.3 |       - |       - |     75.7 |     8,253 |    ₩206,330 |
-| 모든고급수집 |    59.3 |    17.6 |     0.1 |       - |    286.0 |    31,195 |    ₩779,881 |
-| 첫영웅    |   187.1 |    64.4 |     2.5 |       - |    824.1 |    89,899 |  ₩2,247,467 |
-| 모든희귀수집 |   719.9 |   257.8 |    17.7 |     0.0 |  3,066.2 |   334,500 |  ₩8,362,497 |
-| 모든영웅수집 | 5,288.5 | 1,917.1 |   186.9 |     8.0 | 22,284.8 | 2,431,066 | ₩60,776,648 |
+| First High    |     0.0 |       - |       - |       - |      4.9 |       538 |     ₩13,456 |
+| First Rare    |    10.9 |     2.3 |       - |       - |     75.7 |     8,253 |    ₩206,330 |
+| All High Collected |    59.3 |    17.6 |     0.1 |       - |    286.0 |    31,195 |    ₩779,881 |
+| First Hero    |   187.1 |    64.4 |     2.5 |       - |    824.1 |    89,899 |  ₩2,247,467 |
+| All Rare Collected |   719.9 |   257.8 |    17.7 |     0.0 |  3,066.2 |   334,500 |  ₩8,362,497 |
+| All Hero Collected | 5,288.5 | 1,917.1 |   186.9 |     8.0 | 22,284.8 | 2,431,066 | ₩60,776,648 |
